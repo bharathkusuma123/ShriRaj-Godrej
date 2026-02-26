@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Home, IndianRupee, LayoutGrid, Image, MapPin, Video, FileText, Menu, X } from "lucide-react";
+import { Home, IndianRupee, LayoutGrid, Image, MapPin, Video, Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Home", href: "#home", icon: Home },
@@ -29,10 +29,9 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
         <a href="#home" className="font-display text-xl font-bold text-cream tracking-wide">
-          GODREJ <span className="text-gold">PROPERTIES</span>
+          GOLDEN <span className="text-gold">RESIDENCY</span>
         </a>
 
-        {/* Desktop */}
         <div className="hidden lg:flex items-center gap-1">
           {navItems.map((item) => (
             <a
@@ -48,7 +47,7 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-3">
           <a
-            href="https://api.whatsapp.com/send?phone=919035032000&text=Hi!%20I'm%20Interested%20In%20Godrej%20Raipur%20Plots"
+            href="https://api.whatsapp.com/send?phone=919035032000&text=Hi!%20I'm%20Interested%20In%20Golden%20Residency%20Raipur"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-gold text-forest-deep font-semibold text-sm px-4 py-2 rounded-md hover:opacity-90 transition"
@@ -57,16 +56,11 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile toggle */}
-        <button
-          className="lg:hidden text-cream"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
+        <button className="lg:hidden text-cream" onClick={() => setMobileOpen(!mobileOpen)}>
           {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
         <div className="lg:hidden bg-forest-deep/95 backdrop-blur-md border-t border-primary/20 pb-4">
           {navItems.map((item) => (
@@ -80,14 +74,6 @@ const Navbar = () => {
               {item.label}
             </a>
           ))}
-          <a
-            href="https://api.whatsapp.com/send?phone=919035032000&text=Hi!%20I'm%20Interested%20In%20Godrej%20Raipur%20Plots"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-6 mt-2 block text-center bg-gradient-gold text-forest-deep font-semibold text-sm px-4 py-2 rounded-md"
-          >
-            WhatsApp Us
-          </a>
         </div>
       )}
     </nav>
