@@ -1,30 +1,35 @@
-import { Waves, Trees, Dumbbell, Baby, Theater, Footprints, CircleDot, Fence, Car } from "lucide-react";
+import {
+  Waves, Trees, Dumbbell, Baby, ShieldCheck, Cctv,
+  Church, Droplets, Building2, CircleDot, Volleyball, Fence
+} from "lucide-react";
 
 const amenities = [
-  { icon: CircleDot, label: "Basketball Court" },
-  { icon: Trees, label: "Lawn Terraces" },
-  { icon: Dumbbell, label: "Clubhouse & Gym" },
-  { icon: Baby, label: "Kids Play Area" },
-  { icon: Waves, label: "Swimming Pool" },
-  { icon: Theater, label: "Amphitheatre" },
-  { icon: Footprints, label: "Jogging Track" },
-  { icon: Fence, label: "Skating Rink" },
-  { icon: Trees, label: "Multipurpose Lawn" },
-  { icon: Car, label: "Surface Car Park" },
+  { icon: Fence, label: "Covered Campus" },
+  { icon: Cctv, label: "24×7 CCTV Security" },
+  { icon: Trees, label: "3 Gardens" },
+  { icon: Church, label: "Beautiful Temple" },
+  { icon: Baby, label: "Children's Park" },
+  { icon: Waves, label: "Big Swimming Pool" },
+  { icon: Droplets, label: "Rain Dance" },
+  { icon: Building2, label: "Duplex Club House" },
+  { icon: CircleDot, label: "Indoor Badminton Court" },
+  { icon: Volleyball, label: "Outdoor Volleyball Court" },
+  { icon: Dumbbell, label: "Gym Facility" },
+  { icon: ShieldCheck, label: "RERA Approved" },
 ];
 
 const AmenitiesSection = () => {
   return (
     <section id="amenities" className="section-padding bg-background">
-      <div className="max-w-6xl mx-auto" style={{ maxWidth: "72rem" }}>
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-2">Amenities</p>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-            Godrej Raipur Plots — <span className="text-gradient-gold">Amenities</span>
+            Golden Residency — <span className="text-gradient-gold">Amenities</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {amenities.map((item, idx) => (
             <div
               key={idx}

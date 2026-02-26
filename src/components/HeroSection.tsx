@@ -18,7 +18,6 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-stretch pt-16">
-      {/* Banner images */}
       {banners.map((banner, idx) => (
         <div
           key={idx}
@@ -26,41 +25,41 @@ const HeroSection = () => {
             idx === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
-          <img
-            src={banner}
-            alt={`Godrej Raipur Plots view ${idx + 1}`}
-            className="w-full h-full object-cover"
-          />
+          <img src={banner} alt={`Golden Residency view ${idx + 1}`} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-forest-deep/90 via-forest-deep/50 to-transparent" />
         </div>
       ))}
 
-      {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 flex flex-col lg:flex-row items-center lg:items-stretch gap-8 py-12 lg:py-0">
-        {/* Left info panel */}
         <div className="flex-1 flex flex-col justify-center animate-fade-in-up">
-          <span className="inline-block bg-gradient-gold text-forest-deep font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 w-fit">
-            Pre-Launch
-          </span>
+          <div className="flex gap-2 mb-6">
+            <span className="inline-block bg-gradient-gold text-forest-deep font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full">
+              T&C Approved
+            </span>
+            <span className="inline-block bg-primary text-primary-foreground font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full">
+              RERA Approved
+            </span>
+          </div>
+
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-cream leading-tight mb-2">
-            Godrej Raipur
+            Golden
             <br />
-            <span className="text-gradient-gold">Plots</span>
+            <span className="text-gradient-gold">Residency</span>
           </h1>
-          <p className="text-cream/70 text-lg mb-2">At Old Dhamtri Road, Raipur</p>
-          <p className="text-cream/50 text-sm mb-6">By Godrej Properties</p>
+          <p className="text-cream/70 text-lg mb-1">Boriyakala, New Dhamtari Road, Raipur</p>
+          <p className="text-cream/50 text-sm mb-6">Premium Plotted Development</p>
 
           <div className="bg-primary/30 backdrop-blur-sm border border-primary/20 rounded-lg p-4 mb-6 max-w-md">
-            <p className="text-gold font-semibold text-sm mb-1">EOI Window Open Now!</p>
-            <p className="text-cream/80 text-xs">Attractive Payment Plan for First 250 Plot Customers*</p>
-            <p className="text-cream/80 text-xs">Early Bird Discount Available</p>
+            <p className="text-gold font-semibold text-sm mb-1">Booking Open Now!</p>
+            <p className="text-cream/80 text-xs">Covered Campus • 24×7 Security with CCTV</p>
+            <p className="text-cream/80 text-xs">RERA & T&C Approved Project</p>
           </div>
 
           <div className="flex flex-wrap gap-4 mb-8">
             {[
-              { label: "Total Land", value: "50+ Acres" },
-              { label: "No. of Plots", value: "600+" },
-              { label: "Plot Size", value: "1200–1800 Sq.Ft" },
+              { label: "Plot Price", value: "₹1,850/sq.ft" },
+              { label: "Club House", value: "₹1,00,000" },
+              { label: "Electricity", value: "₹60,000" },
             ].map((stat) => (
               <div key={stat.label} className="bg-forest-deep/50 backdrop-blur-sm border border-primary/20 rounded-lg px-4 py-3">
                 <p className="text-cream/60 text-xs">{stat.label}</p>
@@ -70,8 +69,10 @@ const HeroSection = () => {
           </div>
 
           <div className="mb-6">
-            <p className="text-cream/60 text-sm">Premium Plots at</p>
-            <p className="text-3xl font-display font-bold text-gold">₹ 50 Lakhs* <span className="text-lg text-cream/60">Onwards</span></p>
+            <p className="text-cream/60 text-sm">Premium Plots Starting at</p>
+            <p className="text-3xl font-display font-bold text-gold">
+              ₹1,850 <span className="text-lg text-cream/60">per sq.ft</span>
+            </p>
           </div>
 
           <a
@@ -81,9 +82,6 @@ const HeroSection = () => {
             I am Interested
           </a>
 
-          <p className="text-cream/40 text-xs mt-4">RERA No : Coming Soon !!</p>
-
-          {/* Slide indicators */}
           <div className="flex gap-2 mt-8">
             {banners.map((_, idx) => (
               <button
@@ -97,7 +95,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Right form */}
         <div className="w-full lg:w-[400px] flex items-center lg:items-start lg:pt-20">
           <EnquiryForm />
         </div>
