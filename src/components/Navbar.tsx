@@ -3,7 +3,7 @@ import { Home, IndianRupee, LayoutGrid, Image, MapPin, Video, Menu, X } from "lu
 
 const navItems = [
   { label: "Home", href: "#home", icon: Home },
-  { label: "Price", href: "#pricing", icon: IndianRupee },
+  // { label: "Price", href: "#pricing", icon: IndianRupee },
   { label: "Site Plan", href: "#siteplan", icon: LayoutGrid },
   { label: "Amenities", href: "#amenities", icon: LayoutGrid },
   { label: "Gallery", href: "#gallery", icon: Image },
@@ -29,7 +29,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
         <a href="#home" className="font-display text-xl font-bold text-cream tracking-wide">
-          GOLDEN <span className="text-gold">RESIDENCY</span>
+          GODREJ <span className="text-gold">RAIPUR   <span  className="text-sm">PLOTS</span> </span>
         </a>
 
         <div className="hidden lg:flex items-center gap-1">
@@ -47,7 +47,7 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-3">
           <a
-            href="https://api.whatsapp.com/send?phone=919035032000&text=Hi!%20I'm%20Interested%20In%20Golden%20Residency%20Raipur"
+            href="https://api.whatsapp.com/send?phone=919035032000&text=Hi!%20I'm%20Interested%20In%20GODREJ %20RAIPUR PLOTS%20Raipur"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-gold text-forest-deep font-semibold text-sm px-4 py-2 rounded-md hover:opacity-90 transition"

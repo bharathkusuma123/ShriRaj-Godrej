@@ -5,22 +5,22 @@ const SitePlanSection = () => {
     <section id="siteplan" className="section-padding bg-background">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-2">Site & Floor Plans</p>
+          {/* <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-2">Site & Floor Plans</p> */}
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-            Godrej Raipur Plots — <span className="text-gradient-gold">Master Plan</span>
+            GODREJ RAIPUR PLOTS — <span className="text-gradient-gold">Master Layout Plan</span>
           </h2>
         </div>
 
         <div className="bg-card rounded-xl overflow-hidden shadow-lg border border-border">
           <img
             src={heroBanner1}
-            alt="Godrej Raipur Plots Master Plan"
+            alt="GODREJ RAIPUR PLOTS Master Plan"
             className="w-full h-auto"
           />
         </div>
-        <p className="text-center text-muted-foreground text-xs mt-4">
+        {/* <p className="text-center text-muted-foreground text-xs mt-4">
           *Master plan is indicative and subject to change as per approvals.
-        </p>
+        </p> */}
       </div>
     </section>
   );

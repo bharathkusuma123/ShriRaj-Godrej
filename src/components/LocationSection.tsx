@@ -13,11 +13,12 @@ const LocationSection = () => {
     <section id="location" className="section-padding bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-2">Location</p>
+          {/* <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-2">Location</p> */}
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-            Golden Residency — <span className="text-gradient-gold">Location</span>
+            GODREJ RAIPUR PLOTS — <span className="text-gradient-gold">Location</span>
           </h2>
-          <p className="text-muted-foreground text-sm mt-2">Boriyakala, New Dhamtari Road, Raipur</p>
+          <p className="text-muted-foreground text-sm mt-2">Near Old Dhamtari Road,
+Boriya Khurd Raipur 492013</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
@@ -30,7 +31,7 @@ const LocationSection = () => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Golden Residency location"
+              title="GODREJ RAIPUR PLOTS location"
             />
           </div>
 

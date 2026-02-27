@@ -20,9 +20,9 @@ const GallerySection = () => {
     <section id="gallery" className="section-padding bg-secondary/50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-2">Gallery</p>
+          {/* <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-2">Gallery</p> */}
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-            Godrej Raipur Plots — <span className="text-gradient-gold">Gallery</span>
+            GODREJ RAIPUR PLOTS — <span className="text-gradient-gold">Gallery</span>
           </h2>
         </div>
 

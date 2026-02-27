@@ -4,18 +4,18 @@ import {
 } from "lucide-react";
 
 const amenities = [
-  { icon: Fence, label: "Covered Campus" },
+  // { icon: Fence, label: "Covered Campus" },
   { icon: Cctv, label: "24×7 CCTV Security" },
   { icon: Trees, label: "3 Gardens" },
-  { icon: Church, label: "Beautiful Temple" },
+  // { icon: Church, label: "Beautiful Temple" },
   { icon: Baby, label: "Children's Park" },
-  { icon: Waves, label: "Big Swimming Pool" },
-  { icon: Droplets, label: "Rain Dance" },
-  { icon: Building2, label: "Duplex Club House" },
-  { icon: CircleDot, label: "Indoor Badminton Court" },
-  { icon: Volleyball, label: "Outdoor Volleyball Court" },
-  { icon: Dumbbell, label: "Gym Facility" },
-  { icon: ShieldCheck, label: "RERA Approved" },
+  { icon: Waves, label: "Swimming Pool" },
+  // { icon: Droplets, label: "Rain Dance" },
+  { icon: Building2, label: "Club House" },
+  { icon: CircleDot, label: "Indoor Games" },
+  { icon: Volleyball, label: "Outdoor Games" },
+  { icon: Dumbbell, label: "GYM Facility" },
+  // { icon: ShieldCheck, label: "RERA Approved" },
 ];
 
 const AmenitiesSection = () => {
@@ -23,9 +23,9 @@ const AmenitiesSection = () => {
     <section id="amenities" className="section-padding bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-2">Amenities</p>
+          {/* <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-2">Amenities</p> */}
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-            Golden Residency — <span className="text-gradient-gold">Amenities</span>
+            GODREJ RAIPUR PLOTS — <span className="text-gradient-gold">Amenities</span>
           </h2>
         </div>
 
