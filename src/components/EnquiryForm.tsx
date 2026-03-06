@@ -18,7 +18,7 @@ const EnquiryForm = () => {
           Book FREE Site Visit
         </a>
         <a
-          href="https://api.whatsapp.com/send?phone=919035032000&text=Hi!%20I'm%20Interested%20In%20GODREJ %20RAIPUR PLOTS%20Raipur"
+          href="https://api.whatsapp.com/send?phone=9399492809&text=Hi!%20I'm%20Interested%20In%20GODREJ %20RAIPUR PLOTS%20Raipur"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 bg-gradient-gold text-forest-deep text-center py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition"
