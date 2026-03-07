@@ -24,7 +24,7 @@ Boriya Khurd Raipur 492013</p>
         <div className="grid lg:grid-cols-2 gap-8">
           <div className="rounded-xl overflow-hidden shadow-lg border border-border h-[400px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.962!2d81.6296!3d21.2514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBoriyakala+New+Dhamtari+Road+Raipur!5e0!3m2!1sen!2sin!4v1"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.5262342389965!2d81.6208556!3d20.971532699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dae0d77702e1%3A0x3bac3d607d885783!2sOld%20Dhamtari%20Rd%2C%20Chhattisgarh!5e0!3m2!1sen!2sin!4v1772786222653!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}

@@ -7,7 +7,9 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Wallfort from "./pages/Walfort";
 import PropNest from "./pages/PropNest";
+import ShrirajProperty from "./pages/ShrirajProperty"; // Import the new component
 const queryClient = new QueryClient();
+
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -16,10 +18,11 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-           <Route path="/" element={<Index />} />
+         
+           <Route path="/godrej" element={<Index />} />
    <Route path="/propnest" element={<PropNest />} /> 
-             <Route path="/walfort" element={<Wallfort />} />
+    <Route path="/walfort" element={<Wallfort />} />
+    <Route path="/" element={<ShrirajProperty />} /> {/* Add new route */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
