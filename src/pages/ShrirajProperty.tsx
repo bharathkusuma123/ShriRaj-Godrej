@@ -597,6 +597,8 @@ import {
   HeadphonesIcon,
   ExternalLink
 } from "lucide-react";
+import {  Calendar } from "lucide-react";
+
 import { useState } from "react";
 
 
@@ -1293,53 +1295,89 @@ const ContactSection = () => {
 // ============ Footer ============
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-background py-14">
+    <footer className="bg-gray-900 text-white py-14">
       <div className="container mx-auto px-4">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* Logo & Description - Full width on mobile, first column on desktop */}
+          <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <img 
-            src={navlogo} 
+                src={navlogo} 
                 alt="Shriraj Property Logo" 
-                className="h-14 w-auto " 
+                className="h-14 w-auto" 
               />
-              {/* <span className="font-display text-lg font-bold">Shriraj Property</span> */}
             </div>
-            <p className="text-background/60 text-sm leading-relaxed">
+            <p className="text-gray-300 text-sm leading-relaxed">
               Shriraj Property Solutions Pvt. Ltd. — Your trusted partner for seamless real estate solutions in Raipur and across Chhattisgarh.
             </p>
           </div>
-          <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm text-background/60">
-              <li><a href="#home" className="hover:text-primary transition-colors">Home</a></li>
-              <li><a href="#about" className="hover:text-primary transition-colors">About</a></li>
-              <li><a href="#projects" className="hover:text-primary transition-colors">Projects</a></li>
-              <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
+
+          {/* Quick Links */}
+          <div className="md:col-span-1">
+            <h4 className="font-semibold mb-4 text-lg relative inline-block pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-0.5 after:bg-primary">
+              Quick Links
+            </h4>
+            <ul className="space-y-3 text-sm text-gray-300">
+              <li>
+                <a href="#home" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <span className="w-1 h-1 bg-primary rounded-full"></span>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#about" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <span className="w-1 h-1 bg-primary rounded-full"></span>
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#projects" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <span className="w-1 h-1 bg-primary rounded-full"></span>
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <span className="w-1 h-1 bg-primary rounded-full"></span>
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
-          <div>
-            <h4 className="font-semibold mb-4">Projects</h4>
-            <ul className="space-y-2 text-sm text-background/60">
-              <li>Property Sale</li>
-              <li>Property Purchase</li>
-              <li>Property on Rent</li>
-              <li>Farm Houses & Plots</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold mb-4">Contact Info</h4>
-            <ul className="space-y-2 text-sm text-background/60">
-              <li>Boriyakhurd, Raipur, CG 492013</li>
-              <li>08062429849</li>
-              <li>10:30 AM - 07:00 PM</li>
-              <li>All Days Open</li>
+
+          {/* Contact Info */}
+          <div className="md:col-span-1">
+            <h4 className="font-semibold mb-4 text-lg relative inline-block pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-0.5 after:bg-primary">
+              Contact Info
+            </h4>
+            <ul className="space-y-3 text-sm text-gray-300">
+              <li className="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>Boriyakhurd, Raipur, CG 492013</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span>08062429849</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>10:30 AM - 07:00 PM | All Days Open</span>
+              </li>
             </ul>
           </div>
         </div>
-        <div className="border-t border-background/10 mt-10 pt-6 text-center text-sm text-background/40">
-          © {new Date().getFullYear()} Shriraj Property Solutions Pvt. Ltd. All rights reserved.
-        </div>
+
+        {/* Copyright */}
+        {/* <div className="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-400">
+          <p>© {new Date().getFullYear()} Shriraj Property Solutions Pvt. Ltd. All rights reserved.</p>
+        </div> */}
       </div>
     </footer>
   );

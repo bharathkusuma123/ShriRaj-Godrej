@@ -1275,7 +1275,8 @@
 import { useState, useEffect } from "react";
 import { Phone, Menu, X, Shield, Home, Users, Cctv, TreePine, Dumbbell, Gamepad2, Trophy, Play, MapPin, Mail, ChevronRight, Building2, Star, Baby, Waves, UtensilsCrossed, Bike, Footprints, Heart, Sun, ArrowLeft } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
-import heroBanner from "@/images/webnewhome.jpeg"; 
+import heroBannerforweb from "@/images/webnewhome.jpeg"; 
+import heroBannerformobile from "@/images/herobannerformobile.jpeg"
 import aboutimage from "@/images/walfortomega2.jpeg";
 import masterlayout from "@/images/walmart7.jpeg";
 import gal1 from "@/images/ban1.jpeg";
@@ -1604,15 +1605,20 @@ const Wallfort = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="wf-home" className="relative h-screen overflow-hidden">
+      {/* <section id="wf-home" className="relative h-screen overflow-hidden">
         <img
-          src={heroBanner}
+          src={heroBannerforweb}
+          alt="WALLFORT Parkview Banner"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+          <img
+          src={heroBannerformobile}
           alt="WALLFORT Parkview Banner"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 " />
         <div className="absolute inset-0 flex items-center justify-center text-center text-white z-10">
-          {/* <div className="max-w-4xl px-4">
+          <div className="max-w-4xl px-4">
             <p className="text-lg tracking-[5px] uppercase mb-4 animate-[fadeInUp_1s_ease_forwards] opacity-0">
               wallfort Building Homes
             </p>
@@ -1625,9 +1631,30 @@ const Wallfort = () => {
             <p className="text-xl md:text-2xl mb-8 animate-[fadeInUp_1s_ease_0.9s_forwards] opacity-0" style={{ color: wf.primary }}>
               PRIME LOCATION OF DATRENGA
             </p>
-          </div> */}
+          </div>
         </div>
-      </section>
+      </section> */}
+      {/* Hero Section */}
+<section id="wf-home" className="relative h-screen overflow-hidden">
+  {/* Desktop banner - hidden on mobile */}
+  <img
+    src={heroBannerforweb}
+    alt="WALLFORT Parkview Banner"
+    className="absolute inset-0 w-full h-full object-cover hidden md:block"
+  />
+  
+  {/* Mobile banner - hidden on desktop */}
+  <img
+    src={heroBannerformobile}
+    alt="WALLFORT Parkview Banner"
+    className="absolute inset-0 w-full h-full object-cover block md:hidden"
+  />
+  
+  <div className="absolute inset-0" />
+  <div className="absolute inset-0 flex items-center justify-center text-center text-white z-10">
+    {/* Your text content here if needed */}
+  </div>
+</section>
 
       {/* Company Highlights */}
       <section className="py-20 px-4">
@@ -1869,58 +1896,47 @@ const Wallfort = () => {
       </section>
 
       {/* Footer */}
-      <footer className="px-4 py-16" style={{ background: wf.dark, color: "white" }}>
-        <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          <div>
-            <h3 className="text-xl font-bold mb-4">WALLFORT Parkview</h3>
-            <p className="text-white/60 text-sm leading-relaxed">
-              <MapPin className="w-4 h-4 inline mr-1" />
-              Datrenga, Raipur<br />
-              Prime Location of Datrenga
-            </p>
-            <p className="text-white/40 text-xs mt-4">
-              www.wallfortproperties.com
-            </p>
-          </div>
-          <div>
-            <h5 className="text-base font-semibold mb-4 pb-2 relative" style={{ color: wf.primary }}>
-              Quick Links
-              <span className="absolute bottom-0 left-0 w-12 h-0.5" style={{ background: wf.primary }} />
-            </h5>
-            <ul className="space-y-2">
-              {["Home", "Overview", "Gallery", "Amenities"].map((l) => (
-                <li key={l}>
-                  <button onClick={() => scrollTo(`wf-${l.toLowerCase()}`)} className="text-white/70 hover:text-white text-sm transition-colors flex items-center gap-1">
-                    <ChevronRight className="w-3 h-3" /> {l}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h5 className="text-base font-semibold mb-4 pb-2 relative" style={{ color: wf.primary }}>
-              Legal
-              <span className="absolute bottom-0 left-0 w-12 h-0.5" style={{ background: wf.primary }} />
-            </h5>
-            <ul className="space-y-2">
-              <li><span className="text-white/70 text-sm">Privacy Policy</span></li>
-              <li><span className="text-white/70 text-sm">Terms of Use</span></li>
-              <li><span className="text-white/70 text-sm">Disclaimer</span></li>
-            </ul>
-          </div>
-          <div>
-            <h5 className="text-base font-semibold mb-4 pb-2 relative" style={{ color: wf.primary }}>
-              Contact Us
-              <span className="absolute bottom-0 left-0 w-12 h-0.5" style={{ background: wf.primary }} />
-            </h5>
-            <ul className="space-y-2 text-sm text-white/70">
-              <li className="flex items-center gap-2"><Phone className="w-4 h-4" /> +91 7999983093, 9399492809</li>
-              <li className="flex items-center gap-2"><Mail className="w-4 h-4" /> info@wallfortproperties.com</li>
-              <li className="flex items-center gap-2"><MapPin className="w-4 h-4" /> Datrenga, Raipur</li>
-            </ul>
-          </div>
-        </div>
-      </footer>
+   {/* Footer */}
+<footer className="px-4 py-16" style={{ background: wf.dark, color: "white" }}>
+  <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <div>
+      <h3 className="text-xl font-bold mb-4">WALLFORT.</h3>
+      <p className="text-white/60 text-sm leading-relaxed">
+        <MapPin className="w-4 h-4 inline mr-1" />
+        Datrenga, Raipur<br />
+        Prime Location of Datrenga
+      </p>
+    </div>
+    
+    <div>
+      <h5 className="text-base font-semibold mb-4 pb-2 relative" style={{ color: wf.primary }}>
+        Quick Links
+        <span className="absolute bottom-0 left-0 w-12 h-0.5" style={{ background: wf.primary }} />
+      </h5>
+      <ul className="space-y-2">
+        {["Home", "Overview", "Gallery", "Amenities"].map((l) => (
+          <li key={l}>
+            <button onClick={() => scrollTo(`wf-${l.toLowerCase()}`)} className="text-white/70 hover:text-white text-sm transition-colors flex items-center gap-1">
+              <ChevronRight className="w-3 h-3" /> {l}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+    
+    <div>
+      <h5 className="text-base font-semibold mb-4 pb-2 relative" style={{ color: wf.primary }}>
+        Contact Us
+        <span className="absolute bottom-0 left-0 w-12 h-0.5" style={{ background: wf.primary }} />
+      </h5>
+      <ul className="space-y-2 text-sm text-white/70">
+        <li className="flex items-center gap-2"><Phone className="w-4 h-4" /> +91 7999983093, 9399492809</li>
+        <li className="flex items-center gap-2"><Mail className="w-4 h-4" />shrirajteam@gmail.com</li>
+        <li className="flex items-center gap-2"><MapPin className="w-4 h-4" /> Datrenga, Raipur</li>
+      </ul>
+    </div>
+  </div>
+</footer>
 
       {/* Floating CTA */}
       {/* <a
