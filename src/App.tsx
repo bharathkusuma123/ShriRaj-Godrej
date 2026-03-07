@@ -21,7 +21,7 @@ const App = () => (
          
            <Route path="/godrej" element={<Index />} />
    <Route path="/propnest" element={<PropNest />} /> 
-    <Route path="/walfort" element={<Wallfort />} />
+    <Route path="/wallfort" element={<Wallfort />} />
     <Route path="/" element={<ShrirajProperty />} /> {/* Add new route */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

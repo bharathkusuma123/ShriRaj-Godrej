@@ -599,8 +599,11 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
+
 // Import hero background image
 import heroBg from "@/assets/hero-bg.jpg";
+
+import navlogo from "@/images/newshrirajlogo.jpeg"
 
 // ============ Navbar Component ============
 const Navbar = () => {
@@ -611,7 +614,7 @@ const Navbar = () => {
     { label: "About", href: "#about" },
     { label: "Projects", href: "#projects" },
     { label: "Gallery", href: "#gallery" },
-    { label: "Reviews", href: "#reviews" },
+    // { label: "Reviews", href: "#reviews" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -619,10 +622,14 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4 lg:px-8">
         <a href="#home" className="flex items-center gap-2">
-          <Home className="h-7 w-7 text-primary" />
-          <span className="font-display text-xl font-bold tracking-tight text-foreground">
+          <img 
+            src={navlogo} 
+            alt="Shriraj Property Logo" 
+            className="h-14 w-auto"
+          />
+          {/* <span className="font-display text-xl font-bold tracking-tight text-foreground">
             Shriraj<span className="text-primary"> Property</span>
-          </span>
+          </span> */}
         </a>
 
         <ul className="hidden md:flex items-center gap-8">
@@ -690,12 +697,12 @@ const HeroSection = () => {
 
       <div className="relative z-10 container mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center pt-20">
         <div>
-          <p className="text-primary font-medium tracking-widest uppercase text-sm mb-4">
+          <p className="text-white font-medium tracking-widest uppercase text-sm mb-4">
             Shriraj Property Solutions Pvt. Ltd.
           </p>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
             Your Trusted Partner in{" "}
-            <span className="text-primary">Property Solutions</span>
+            <span className="text-white">Property Solutions</span>
           </h1>
           <p className="text-white/80 text-lg max-w-xl mb-8">
             Farmhouses, flats, shops, rentals and more — all available under one roof. Based in Raipur, Chhattisgarh.
@@ -732,32 +739,32 @@ const HeroSection = () => {
 };
 
 // ============ Stats Section ============
-const StatsSection = () => {
-  const stats = [
-    { icon: Building, value: "500+", label: "Properties Delivered" },
-    { icon: Users, value: "1,200+", label: "Happy Clients" },
-    { icon: Award, value: "15+", label: "Years Experience" },
-    { icon: MapPin, value: "25+", label: "Cities Covered" },
-  ];
+// const StatsSection = () => {
+//   const stats = [
+//     { icon: Building, value: "500+", label: "Properties Delivered" },
+//     { icon: Users, value: "1,200+", label: "Happy Clients" },
+//     { icon: Award, value: "15+", label: "Years Experience" },
+//     { icon: MapPin, value: "25+", label: "Cities Covered" },
+//   ];
 
-  return (
-    <section className="bg-primary py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat) => (
-            <div key={stat.label} className="text-center">
-              <stat.icon className="h-8 w-8 text-primary-foreground/70 mx-auto mb-3" />
-              <p className="font-display text-3xl lg:text-4xl font-bold text-primary-foreground">
-                {stat.value}
-              </p>
-              <p className="text-primary-foreground/70 text-sm mt-1">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
+//   return (
+//     <section className="bg-primary py-16">
+//       <div className="container mx-auto px-4">
+//         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+//           {stats.map((stat) => (
+//             <div key={stat.label} className="text-center">
+//               <stat.icon className="h-8 w-8 text-primary-foreground/70 mx-auto mb-3" />
+//               <p className="font-display text-3xl lg:text-4xl font-bold text-primary-foreground">
+//                 {stat.value}
+//               </p>
+//               <p className="text-primary-foreground/70 text-sm mt-1">{stat.label}</p>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
 
 // ============ About Section ============
 const AboutSection = () => {
@@ -779,15 +786,15 @@ const AboutSection = () => {
               className="rounded-2xl shadow-xl w-full object-cover h-[420px]"
               loading="lazy"
             />
-            <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground rounded-xl p-5 shadow-lg hidden lg:block">
+            {/* <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground rounded-xl p-5 shadow-lg hidden lg:block">
               <p className="font-display text-3xl font-bold">Since</p>
               <p className="text-sm">2019</p>
-            </div>
+            </div> */}
           </div>
           <div>
-            <p className="text-primary font-medium tracking-widest uppercase text-sm mb-2">
+            {/* <p className="text-primary font-medium tracking-widest uppercase text-sm mb-2">
               About Us
-            </p>
+            </p> */}
             <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground mb-5">
               Shriraj Property Solutions Pvt. Ltd.
             </h2>
@@ -813,35 +820,27 @@ const AboutSection = () => {
 const ProjectsSection = () => {
   const projects = [
     {
-      icon: Home,
-      title: "Property Sale",
-      description: "We help you sell your property quickly with expert market insights and guidance.",
-      image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&h=300&fit=crop",
-      link: "/projects/property-sale"
-    },
-    {
-      icon: ShoppingBag,
-      title: "Property Purchase",
-      description: "Find your ideal property with our trusted assistance and extensive real estate listings.",
+      title: "Godrej Properties",
+      propertyType: "Residential Plots",
+      configuration: "1200 - 1800 sq.ft.",
+      location: "Old Dhamtari Rd, Chhattisgarh",
       image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=300&fit=crop",
-      link: "/projects/property-purchase"
+      link: "/godrej"
     },
     {
-      icon: Key,
-      title: "Property on Rent",
-      description: "Get the best rental options for homes or commercial spaces as per your needs.",
-      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=500&h=300&fit=crop",
-      link: "/projects/property-rent"
+      title: "Wallfort Parkview",
+      propertyType: "Residential Plots",
+      configuration: "619 - 1500 sq.ft.",
+      location: "Bhatagaon, Raipur",
+      image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&h=300&fit=crop",
+      link: "/wallfort"
     },
   ];
 
   return (
-    <section id="projects" className="py-20 bg-secondary">
+    <section id="projects" className="py-10 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
-          <p className="text-primary font-medium tracking-widest uppercase text-sm mb-2">
-            Our Portfolio
-          </p>
           <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground">
             Our Projects
           </h2>
@@ -849,7 +848,7 @@ const ProjectsSection = () => {
             Expert Solutions for Property Sale, Purchase and Rental — Residential, industrial, commercial, 2 BHK, 3 BHK, shops and rental properties.
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <Card key={project.title} className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative overflow-hidden">
@@ -860,16 +859,28 @@ const ProjectsSection = () => {
                   loading="lazy"
                 />
               </div>
-              <CardContent className="p-6 text-center">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 -mt-10 relative z-10 border-4 border-card">
-                  <project.icon className="h-6 w-6 text-primary" />
+              <CardContent className="p-6">
+                <h3 className="font-display text-xl font-semibold text-foreground mb-3">{project.title}</h3>
+                
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-start gap-2">
+                    <span className="text-primary font-medium text-sm min-w-[100px]">Property Type:</span>
+                    <span className="text-muted-foreground text-sm">{project.propertyType}</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-primary font-medium text-sm min-w-[100px]">Configuration:</span>
+                    <span className="text-muted-foreground text-sm">{project.configuration}</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-primary font-medium text-sm min-w-[100px]">Location:</span>
+                    <span className="text-muted-foreground text-sm">{project.location}</span>
+                  </div>
                 </div>
-                <h3 className="font-display text-xl font-semibold text-foreground mb-2">{project.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">{project.description}</p>
+
                 <Button 
                   variant="outline" 
                   size="sm" 
-                  className="mt-2 group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
                   asChild
                 >
                   <a href={project.link}>
@@ -884,7 +895,6 @@ const ProjectsSection = () => {
     </section>
   );
 };
-
 // ============ Why Choose Us Section ============
 const WhyChooseUs = () => {
   const reasons = [
@@ -906,12 +916,12 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-20 bg-secondary">
+    <section className="py-10 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
-          <p className="text-primary font-medium tracking-widest uppercase text-sm mb-2">
+          {/* <p className="text-primary font-medium tracking-widest uppercase text-sm mb-2">
             Our Strengths
-          </p>
+          </p> */}
           <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground">
             Why Choose Us
           </h2>
@@ -950,12 +960,12 @@ const GallerySection = () => {
   ];
 
   return (
-    <section id="gallery" className="py-20 bg-background">
+    <section id="gallery" className="py-10 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
-          <p className="text-primary font-medium tracking-widest uppercase text-sm mb-2">
+          {/* <p className="text-primary font-medium tracking-widest uppercase text-sm mb-2">
             Our Work
-          </p>
+          </p> */}
           <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground">
             Explore Our Gallery
           </h2>
@@ -979,61 +989,130 @@ const GallerySection = () => {
 };
 
 // ============ Reviews Section ============
-const ReviewsSection = () => {
-  const reviews = [
-    {
-      name: "Ankit Singh",
-      text: "Shriraj Property Solutions Pvt. Ltd. made renting my commercial space quick and hassle-free. Their service was smooth, transparent and very professional. I'm impressed with their knowledge and dedication. Will work with them again!",
-    },
-    {
-      name: "Abhishek Kumar",
-      text: "I had a great experience with Shriraj Property Solutions Pvt. Ltd. They helped me find the perfect home within my budget. The team was professional and honest and guided me throughout the process. Highly recommended for property buyers.",
-    },
-  ];
+// const ReviewsSection = () => {
+//   const reviews = [
+//     {
+//       name: "Ankit Singh",
+//       text: "Shriraj Property Solutions Pvt. Ltd. made renting my commercial space quick and hassle-free. Their service was smooth, transparent and very professional. I'm impressed with their knowledge and dedication. Will work with them again!",
+//     },
+//     {
+//       name: "Abhishek Kumar",
+//       text: "I had a great experience with Shriraj Property Solutions Pvt. Ltd. They helped me find the perfect home within my budget. The team was professional and honest and guided me throughout the process. Highly recommended for property buyers.",
+//     },
+//   ];
 
-  return (
-    <section id="reviews" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-14">
-          <p className="text-primary font-medium tracking-widest uppercase text-sm mb-2">
-            Testimonials
-          </p>
-          <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground">
-            Customer Reviews
-          </h2>
-          <p className="text-muted-foreground mt-3">
-            Discover what our clients think about our service
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {reviews.map((r) => (
-            <Card key={r.name} className="border-0 shadow-lg">
-              <CardContent className="p-8">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-primary text-primary" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground leading-relaxed mb-6 italic">
-                  "{r.text}"
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">
-                    {r.name[0]}
-                  </div>
-                  <p className="font-semibold text-foreground">{r.name}</p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
+//   return (
+//     <section id="reviews" className="py-20 bg-background">
+//       <div className="container mx-auto px-4">
+//         <div className="text-center mb-14">
+//           <p className="text-primary font-medium tracking-widest uppercase text-sm mb-2">
+//             Testimonials
+//           </p>
+//           <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground">
+//             Customer Reviews
+//           </h2>
+//           <p className="text-muted-foreground mt-3">
+//             Discover what our clients think about our service
+//           </p>
+//         </div>
+//         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+//           {reviews.map((r) => (
+//             <Card key={r.name} className="border-0 shadow-lg">
+//               <CardContent className="p-8">
+//                 <div className="flex gap-1 mb-4">
+//                   {[...Array(5)].map((_, i) => (
+//                     <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+//                   ))}
+//                 </div>
+//                 <p className="text-muted-foreground leading-relaxed mb-6 italic">
+//                   "{r.text}"
+//                 </p>
+//                 <div className="flex items-center gap-3">
+//                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">
+//                     {r.name[0]}
+//                   </div>
+//                   <p className="font-semibold text-foreground">{r.name}</p>
+//                 </div>
+//               </CardContent>
+//             </Card>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// ============ Contact Section ============
+// const ContactSection = () => {
+//   const contactInfo = [
+//     { icon: MapPin, label: "Our Office", value: "Boriyakhurd, Raipur, Chhattisgarh 492013" },
+//     { icon: Phone, label: "Call Us", value: "08062429849" },
+//     { icon: Clock, label: "Timings", value: "10:30 AM - 07:00 PM (All Days Open)" },
+//     { icon: Mail, label: "Email", value: "info@shrirajproperty.in" },
+//   ];
+
+//   return (
+//     <section id="contact" className="py-10 bg-secondary">
+//       <div className="container mx-auto px-4">
+//         <div className="text-center mb-14">
+//           {/* <p className="text-primary font-medium tracking-widest uppercase text-sm mb-2">
+//             Reach Out
+//           </p> */}
+//           <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground">
+//             Get in Touch
+//           </h2>
+//           <p className="text-muted-foreground mt-3 max-w-xl mx-auto">
+//             Connect with Shriraj Property Solutions Pvt. Ltd. today for expert advice and reliable services for all your real estate needs.
+//           </p>
+//         </div>
+//         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+//           <div className="bg-card rounded-2xl p-8 shadow-lg border border-border">
+//             <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+//               <div className="grid sm:grid-cols-2 gap-4">
+//                 <Input placeholder="Your Name" />
+//                 <Input placeholder="Your Email" type="email" />
+//               </div>
+//               <Input placeholder="Phone Number" type="tel" />
+//               <Textarea placeholder="Your Message" rows={5} />
+//               <Button className="w-full" size="lg">
+//                 Send Message
+//               </Button>
+//             </form>
+//           </div>
+
+//           <div className="flex flex-col justify-center gap-8">
+//             {contactInfo.map((c) => (
+//               <div key={c.label} className="flex items-start gap-4">
+//                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+//                   <c.icon className="h-5 w-5 text-primary" />
+//                 </div>
+//                 <div>
+//                   <h4 className="font-semibold text-foreground mb-1">{c.label}</h4>
+//                   <p className="text-muted-foreground text-sm">{c.value}</p>
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
 
 // ============ Contact Section ============
 const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phoneNumber: '',
+    message: ''
+  });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
+
   const contactInfo = [
     { icon: MapPin, label: "Our Office", value: "Boriyakhurd, Raipur, Chhattisgarh 492013" },
     { icon: Phone, label: "Call Us", value: "08062429849" },
@@ -1041,13 +1120,81 @@ const ContactSection = () => {
     { icon: Mail, label: "Email", value: "info@shrirajproperty.in" },
   ];
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ type: '', message: '' });
+
+    // Split full name into first and last name if user enters in single field
+    // For now, we're using separate fields as per the updated form
+
+    const payload = {
+      first_name: formData.firstName,
+      last_name: formData.lastName,
+      email: formData.email,
+      phone_number: formData.phoneNumber,
+      message: formData.message
+    };
+
+    try {
+      const response = await fetch('https://test.shrirajteam.com:85/leads/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({ 
+          type: 'success', 
+          message: 'Thank you! Your message has been sent successfully.' 
+        });
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phoneNumber: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus({ 
+          type: 'error', 
+          message: data.message || 'Something went wrong. Please try again.' 
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({ 
+        type: 'error', 
+        message: 'Network error. Please check your connection and try again.' 
+      });
+    } finally {
+      setIsSubmitting(false);
+      
+      // Clear success message after 5 seconds
+      if (submitStatus.type === 'success') {
+        setTimeout(() => {
+          setSubmitStatus({ type: '', message: '' });
+        }, 5000);
+      }
+    }
+  };
+
   return (
-    <section id="contact" className="py-20 bg-secondary">
+    <section id="contact" className="py-10 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
-          <p className="text-primary font-medium tracking-widest uppercase text-sm mb-2">
-            Reach Out
-          </p>
           <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground">
             Get in Touch
           </h2>
@@ -1057,15 +1204,69 @@ const ContactSection = () => {
         </div>
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           <div className="bg-card rounded-2xl p-8 shadow-lg border border-border">
-            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <Input placeholder="Your Name" />
-                <Input placeholder="Your Email" type="email" />
+            {submitStatus.message && (
+              <div className={`mb-6 p-4 rounded-lg ${
+                submitStatus.type === 'success' 
+                  ? 'bg-green-100 text-green-700 border border-green-200' 
+                  : 'bg-red-100 text-red-700 border border-red-200'
+              }`}>
+                {submitStatus.message}
               </div>
-              <Input placeholder="Phone Number" type="tel" />
-              <Textarea placeholder="Your Message" rows={5} />
-              <Button className="w-full" size="lg">
-                Send Message
+            )}
+            
+            <form className="space-y-5" onSubmit={handleSubmit}>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <Input 
+                  placeholder="First Name" 
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  required
+                  disabled={isSubmitting}
+                />
+                <Input 
+                  placeholder="Last Name" 
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  required
+                  disabled={isSubmitting}
+                />
+              </div>
+              <Input 
+                placeholder="Your Email" 
+                type="email" 
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                disabled={isSubmitting}
+              />
+              <Input 
+                placeholder="Phone Number" 
+                type="tel" 
+                name="phoneNumber"
+                value={formData.phoneNumber}
+                onChange={handleChange}
+                required
+                disabled={isSubmitting}
+              />
+              <Textarea 
+                placeholder="Your Message" 
+                rows={5} 
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                disabled={isSubmitting}
+              />
+              <Button 
+                className="w-full" 
+                size="lg" 
+                type="submit"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </Button>
             </form>
           </div>
@@ -1097,8 +1298,12 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Home className="h-6 w-6 text-primary" />
-              <span className="font-display text-lg font-bold">Shriraj Property</span>
+              <img 
+            src={navlogo} 
+                alt="Shriraj Property Logo" 
+                className="h-14 w-auto " 
+              />
+              {/* <span className="font-display text-lg font-bold">Shriraj Property</span> */}
             </div>
             <p className="text-background/60 text-sm leading-relaxed">
               Shriraj Property Solutions Pvt. Ltd. — Your trusted partner for seamless real estate solutions in Raipur and across Chhattisgarh.
@@ -1146,12 +1351,12 @@ const ShrirajProperty = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
-      <StatsSection />
+      {/* <StatsSection /> */}
       <AboutSection />
       <ProjectsSection />
       <WhyChooseUs />
       <GallerySection />
-      <ReviewsSection />
+      {/* <ReviewsSection /> */}
       <ContactSection />
       <Footer />
     </div>
