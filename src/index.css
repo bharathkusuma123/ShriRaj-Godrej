@@ -172,3 +172,10 @@ html {
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
 }
+
+
+
+.h-screen{
+height: 60vh !important;
+margin-top: 60px !important;
+}
