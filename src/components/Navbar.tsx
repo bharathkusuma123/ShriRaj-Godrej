@@ -217,13 +217,13 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
         <div className="flex items-center gap-3">
-          <button
+          {/* <button
             onClick={goBack}
             className="flex items-center justify-center w-8 h-8 rounded-full bg-cream/10 hover:bg-cream/20 text-cream hover:text-gold transition-all duration-300"
             aria-label="Go back"
           >
             <ArrowLeft className="w-4 h-4" />
-          </button>
+          </button> */}
           <a href="#home" className="font-display text-xl font-bold text-cream tracking-wide">
             GODREJ <span className="text-gold">RAIPUR   <span  className="text-sm">PLOTS</span> </span>
           </a>
@@ -242,14 +242,14 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="hidden lg:flex items-center gap-3">
+        {/* <div className="hidden lg:flex items-center gap-3">
           <Link
             to="/wallfort"
             className="bg-gradient-gold text-forest-deep font-semibold text-sm px-4 py-2 rounded-md hover:opacity-90 transition"
           >
             WallFort
           </Link>
-        </div>
+        </div> */}
 
         <button className="lg:hidden text-cream" onClick={() => setMobileOpen(!mobileOpen)}>
           {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

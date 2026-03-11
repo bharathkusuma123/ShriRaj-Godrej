@@ -2142,7 +2142,8 @@ const Wallfort = () => {
       full_name: formData.full_name || "Not provided",
       email: formData.email,
       phone_number: formData.phone_number,
-      message: formData.message || `Enquiry from WALLFORT Parkview landing page.`
+      message: formData.message || `Enquiry from WALLFORT Parkview landing page.`,
+      property_name:"WALLFORT Parkview",
     };
 
     try {
@@ -2205,14 +2206,14 @@ const Wallfort = () => {
       >
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <button
+            {/* <button
               onClick={goBack}
               className="flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/10 text-foreground hover:text-primary transition-all duration-300"
               style={{ color: wf.dark }}
               aria-label="Go back"
             >
               <ArrowLeft className="w-4 h-4" />
-            </button>
+            </button> */}
             <button
               onClick={() => scrollTo("wf-home")}
               className="text-xl font-bold uppercase tracking-widest"
@@ -2238,12 +2239,12 @@ const Wallfort = () => {
               </button>
             ))}
 
-            <Link
+            {/* <Link
               to="/godrej"
               className="bg-gradient-gold text-forest-deep font-semibold text-sm px-4 py-2 rounded-md hover:opacity-90 transition"
             >
               Godrej
-            </Link>
+            </Link> */}
           </div>
 
           <button className="lg:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>

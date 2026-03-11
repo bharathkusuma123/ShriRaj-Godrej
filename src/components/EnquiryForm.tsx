@@ -309,7 +309,8 @@ const EnquiryForm = () => {
       full_name: formData.full_name || "Not provided",
       email: formData.email,
       phone_number: formData.phone_number,
-      message: formData.message || `Enquiry from GODREJ RAIPUR PLOTS landing page`
+      message: formData.message || `Enquiry from GODREJ RAIPUR PLOTS landing page`,
+      property_name:"GODREJ RAIPUR PLOTS",
     };
 
     try {
