@@ -1605,84 +1605,84 @@ const AboutSection = () => {
 };
 
 // ============ Projects Section ============
-// const ProjectsSection = () => {
-//   const projects = [
-//     {
-//       title: "Godrej Properties",
-//       propertyType: "Residential Plots",
-//       configuration: "1200 - 1800 sq.ft.",
-//       location: "Old Dhamtari Rd, Chhattisgarh",
-//       image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=300&fit=crop",
-//       link: "/godrej"
-//     },
-//     {
-//       title: "Wallfort Parkview",
-//       propertyType: "Residential Plots",
-//       configuration: "619 - 1500 sq.ft.",
-//       location: "Bhatagaon, Raipur",
-//       image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&h=300&fit=crop",
-//       link: "/wallfort"
-//     },
-//   ];
+const ProjectsSection = () => {
+  const projects = [
+    {
+      title: "Godrej Properties",
+      propertyType: "Residential Plots",
+      configuration: "1200 - 1800 sq.ft.",
+      location: "Old Dhamtari Rd, Chhattisgarh",
+      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=300&fit=crop",
+      link: "/godrej"
+    },
+    {
+      title: "Wallfort Parkview",
+      propertyType: "Residential Plots",
+      configuration: "619 - 1500 sq.ft.",
+      location: "Bhatagaon, Raipur",
+      image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&h=300&fit=crop",
+      link: "/wallfort"
+    },
+  ];
 
-//   return (
-//     <section id="projects" className="py-10 bg-secondary">
-//       <div className="container mx-auto px-4">
-//         <div className="text-center mb-14">
-//           <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground">
-//             Our Projects
-//           </h2>
-//           <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
-//             Expert Solutions for Property Sale, Purchase and Rental — Residential, industrial, commercial, 2 BHK, 3 BHK, shops and rental properties.
-//           </p>
-//         </div>
-//         <div className="grid md:grid-cols-2 gap-8">
-//           {projects.map((project) => (
-//             <Card key={project.title} className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-//               <div className="relative overflow-hidden">
-//                 <img
-//                   src={project.image}
-//                   alt={project.title}
-//                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
-//                   loading="lazy"
-//                 />
-//               </div>
-//               <CardContent className="p-6">
-//                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">{project.title}</h3>
+  return (
+    <section id="projects" className="py-10 bg-secondary">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-14">
+          <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground">
+            Our Projects
+          </h2>
+          <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
+            Expert Solutions for Property Sale, Purchase and Rental — Residential, industrial, commercial, 2 BHK, 3 BHK, shops and rental properties.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-8">
+          {projects.map((project) => (
+            <Card key={project.title} className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="relative overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="font-display text-xl font-semibold text-foreground mb-3">{project.title}</h3>
                 
-//                 <div className="space-y-2 mb-4">
-//                   <div className="flex items-start gap-2">
-//                     <span className="text-primary font-medium text-sm min-w-[100px]">Property Type:</span>
-//                     <span className="text-muted-foreground text-sm">{project.propertyType}</span>
-//                   </div>
-//                   <div className="flex items-start gap-2">
-//                     <span className="text-primary font-medium text-sm min-w-[100px]">Configuration:</span>
-//                     <span className="text-muted-foreground text-sm">{project.configuration}</span>
-//                   </div>
-//                   <div className="flex items-start gap-2">
-//                     <span className="text-primary font-medium text-sm min-w-[100px]">Location:</span>
-//                     <span className="text-muted-foreground text-sm">{project.location}</span>
-//                   </div>
-//                 </div>
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-start gap-2">
+                    <span className="text-primary font-medium text-sm min-w-[100px]">Property Type:</span>
+                    <span className="text-muted-foreground text-sm">{project.propertyType}</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-primary font-medium text-sm min-w-[100px]">Configuration:</span>
+                    <span className="text-muted-foreground text-sm">{project.configuration}</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-primary font-medium text-sm min-w-[100px]">Location:</span>
+                    <span className="text-muted-foreground text-sm">{project.location}</span>
+                  </div>
+                </div>
 
-//                 <Button 
-//                   variant="outline" 
-//                   size="sm" 
-//                   className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
-//                   asChild
-//                 >
-//                   <a href={project.link}>
-//                     View Details <ExternalLink className="ml-2 h-4 w-4" />
-//                   </a>
-//                 </Button>
-//               </CardContent>
-//             </Card>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                  asChild
+                >
+                  <a href={project.link}>
+                    View Details <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 // ============ Why Choose Us Section ============
 const WhyChooseUs = () => {
@@ -2031,7 +2031,7 @@ const ShrirajProperty = () => {
       <Navbar />
       <HeroSection />
       <AboutSection />
-      {/* <ProjectsSection /> */}
+      <ProjectsSection />
       <WhyChooseUs />
       <GallerySection />
       <ContactSection />
