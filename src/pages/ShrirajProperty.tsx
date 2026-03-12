@@ -1437,6 +1437,9 @@ import { useState } from "react";
 // Import hero background image
 import heroBg from "@/assets/hero-bg.jpg";
 import navlogo from "@/images/newshrirajlogo.jpeg"
+import img1 from "@/images/godrejraipurplots.jpg"
+import img2 from "@/images/wallfortparkview.jpg"
+
 
 // ============ Navbar Component ============
 const Navbar = () => {
@@ -1612,7 +1615,7 @@ const ProjectsSection = () => {
       propertyType: "Residential Plots",
       configuration: "1200 - 1800 sq.ft.",
       location: "Old Dhamtari Rd, Chhattisgarh",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=300&fit=crop",
+      image: img1,
       link: "/godrej"
     },
     {
@@ -1620,7 +1623,7 @@ const ProjectsSection = () => {
       propertyType: "Residential Plots",
       configuration: "619 - 1500 sq.ft.",
       location: "Bhatagaon, Raipur",
-      image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&h=300&fit=crop",
+      image:img2,
       link: "/wallfort"
     },
   ];
@@ -1630,11 +1633,11 @@ const ProjectsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground">
-            Our Projects
+            Projects
           </h2>
-          <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
+          {/* <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
             Expert Solutions for Property Sale, Purchase and Rental — Residential, industrial, commercial, 2 BHK, 3 BHK, shops and rental properties.
-          </p>
+          </p> */}
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project) => (

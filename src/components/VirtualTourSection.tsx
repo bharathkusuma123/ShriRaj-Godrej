@@ -34,7 +34,8 @@
 
 
 
-import heroBanner3 from "@/assets/hero-banner-3.jpg";
+//import heroBanner3 from "@/assets/hero-banner-3.jpg";
+import heroBanner3 from "@/assets/virtual-tour.jpg";
 import { Play } from "lucide-react";
 import { useState } from "react";
 

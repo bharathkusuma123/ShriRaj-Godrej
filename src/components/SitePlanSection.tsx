@@ -1,4 +1,5 @@
-import heroBanner1 from "@/assets/hero-banner-1.jpg";
+//import heroBanner1 from "@/assets/hero-banner-1.jpg";
+import heroBanner1 from "@/images/master-plan.jpg";
 
 const SitePlanSection = () => {
   return (

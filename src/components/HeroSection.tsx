@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-import heroBanner1 from "@/assets/hero-banner-1.jpg";
-import heroBanner2 from "@/assets/hero-banner-2.jpg";
-import heroBanner3 from "@/assets/hero-banner-3.jpg";
+import heroBanner1 from "@/assets/banner3.jpg";
+import heroBanner2 from "@/assets/banner3.jpg";
 import EnquiryForm from "./EnquiryForm";
 
-const banners = [heroBanner1, heroBanner2, heroBanner3];
+const banners = [heroBanner1, heroBanner2];
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

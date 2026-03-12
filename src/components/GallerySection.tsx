@@ -1,16 +1,23 @@
 import heroBanner1 from "@/assets/hero-banner-1.jpg";
 import heroBanner2 from "@/assets/hero-banner-2.jpg";
 import heroBanner3 from "@/assets/hero-banner-3.jpg";
+import galleryimage1 from "@/images/g1.jpg";
+import galleryimage2 from "@/images/g2.jpg";
+import galleryimage3 from "@/images/g3.jpg";
+import galleryimage4 from "@/images/g4.jpg";
+import galleryimage5 from "@/images/g5.jpg";
+import galleryimage6 from "@/images/g6.jpg";
+
 import { useState } from "react";
 import { X } from "lucide-react";
 
 const galleryImages = [
-  { src: heroBanner1, alt: "Aerial view of the community" },
-  { src: heroBanner2, alt: "Grand entrance gate" },
-  { src: heroBanner3, alt: "Clubhouse and pool" },
-  { src: heroBanner1, alt: "Landscaped roads" },
-  { src: heroBanner2, alt: "Garden walkways" },
-  { src: heroBanner3, alt: "Premium amenities" },
+  { src: galleryimage1, alt: "gallery-image" },
+  { src: galleryimage2, alt: "gallery-image" },
+  { src: galleryimage3, alt: "gallery-image" },
+  { src: galleryimage4, alt: "gallery-image" },
+  { src: galleryimage5, alt: "gallery-image" },
+  { src: galleryimage6, alt: "gallery-image" },
 ];
 
 const GallerySection = () => {
