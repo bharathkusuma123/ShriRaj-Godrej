@@ -65,7 +65,7 @@
 //         </ul>
 
 //         <Button className="hidden md:inline-flex" size="sm" asChild>
-//           <a href="tel:8062429849">Call Now : 08062429849</a>
+//           <a href="tel:8062429849">Call Now : 7999983093</a>
 //         </Button>
 
 //         <button
@@ -93,7 +93,7 @@
 //             ))}
 //           </ul>
 //           <Button className="w-full mt-3" size="sm" asChild>
-//             <a href="tel:8062429849">Call Now : 08062429849</a>
+//             <a href="tel:8062429849">Call Now : 7999983093</a>
 //           </Button>
 //         </div>
 //       )}
@@ -134,7 +134,7 @@
 //             </Button>
 //             <Button size="lg" variant="outline" className="text-base px-8 border-white/30 text-white hover:bg-white/10 hover:text-white" asChild>
 //               <a href="tel:8062429849">
-//                 <Phone className="mr-2 h-5 w-5" /> 08062429849
+//                 <Phone className="mr-2 h-5 w-5" /> 7999983093
 //               </a>
 //             </Button>
 //           </div>
@@ -443,7 +443,7 @@
 // const ContactSection = () => {
 //   const contactInfo = [
 //     { icon: MapPin, label: "Our Office", value: "Boriyakhurd, Raipur, Chhattisgarh 492013" },
-//     { icon: Phone, label: "Call Us", value: "08062429849" },
+//     { icon: Phone, label: "Call Us", value: "7999983093" },
 //     { icon: Clock, label: "Timings", value: "10:30 AM - 07:00 PM (All Days Open)" },
 //     { icon: Mail, label: "Email", value: "info@shrirajproperty.in" },
 //   ];
@@ -533,7 +533,7 @@
 //             <h4 className="font-semibold mb-4">Contact Info</h4>
 //             <ul className="space-y-2 text-sm text-background/60">
 //               <li>Boriyakhurd, Raipur, CG 492013</li>
-//               <li>08062429849</li>
+//               <li>7999983093</li>
 //               <li>10:30 AM - 07:00 PM</li>
 //               <li>All Days Open</li>
 //             </ul>
@@ -648,7 +648,7 @@
 //         </ul>
 
 //         <Button className="hidden md:inline-flex" size="sm" asChild>
-//           <a href="tel:8062429849">Call Now : 08062429849</a>
+//           <a href="tel:8062429849">Call Now : 7999983093</a>
 //         </Button>
 
 //         <button
@@ -676,7 +676,7 @@
 //             ))}
 //           </ul>
 //           <Button className="w-full mt-3" size="sm" asChild>
-//             <a href="tel:8062429849">Call Now : 08062429849</a>
+//             <a href="tel:8062429849">Call Now : 7999983093</a>
 //           </Button>
 //         </div>
 //       )}
@@ -717,13 +717,13 @@
 //             </Button>
 //             {/* <Button size="lg" variant="outline" className="text-base px-8 border-white/30 text-white hover:bg-white/10 hover:text-white" asChild>
 //               <a href="tel:8062429849">
-//                 <Phone className="mr-2 h-5 w-5" /> 08062429849
+//                 <Phone className="mr-2 h-5 w-5" /> 7999983093
 //               </a>
 //             </Button> */}
 
 //             <Button size="lg" variant="outline" className="text-base px-8 border-white/30  hover:bg-white/10 hover:text-white" asChild>
 //               <a href="tel:8062429849">
-//                 <Phone className="mr-2 h-5 w-5" /> 08062429849
+//                 <Phone className="mr-2 h-5 w-5" /> 7999983093
 //               </a>
 //             </Button>
 //           </div>
@@ -1048,7 +1048,7 @@
 // // const ContactSection = () => {
 // //   const contactInfo = [
 // //     { icon: MapPin, label: "Our Office", value: "Boriyakhurd, Raipur, Chhattisgarh 492013" },
-// //     { icon: Phone, label: "Call Us", value: "08062429849" },
+// //     { icon: Phone, label: "Call Us", value: "7999983093" },
 // //     { icon: Clock, label: "Timings", value: "10:30 AM - 07:00 PM (All Days Open)" },
 // //     { icon: Mail, label: "Email", value: "info@shrirajproperty.in" },
 // //   ];
@@ -1117,7 +1117,7 @@
 
 //   const contactInfo = [
 //     { icon: MapPin, label: "Our Office", value: "Boriyakhurd, Raipur, Chhattisgarh 492013" },
-//     { icon: Phone, label: "Call Us", value: "08062429849" },
+//     { icon: Phone, label: "Call Us", value: "7999983093" },
 //     { icon: Clock, label: "Timings", value: "10:30 AM - 07:00 PM (All Days Open)" },
 //     { icon: Mail, label: "Email", value: "info@shrirajproperty.in" },
 //   ];
@@ -1362,7 +1362,7 @@
 //                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 //                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
 //                 </svg>
-//                 <span>08062429849</span>
+//                 <span>7999983093</span>
 //               </li>
 //               <li className="flex items-center gap-3">
 //                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1478,7 +1478,7 @@ const Navbar = () => {
         </ul>
 
         <Button className="hidden md:inline-flex" size="sm" asChild>
-          <a href="tel:8062429849">Call Now : 08062429849</a>
+          <a href="tel:8062429849">Call Now : 7999983093</a>
         </Button>
 
         <button
@@ -1506,7 +1506,7 @@ const Navbar = () => {
             ))}
           </ul>
           <Button className="w-full mt-3" size="sm" asChild>
-            <a href="tel:8062429849">Call Now : 08062429849</a>
+            <a href="tel:7999983093">Call Now : 7999983093</a>
           </Button>
         </div>
       )}
@@ -1547,7 +1547,7 @@ const HeroSection = () => {
             </Button>
             <Button size="lg" variant="outline" className="text-base px-8 border-white/30 hover:bg-white/10 hover:text-white" asChild>
               <a href="tel:8062429849">
-                <Phone className="mr-2 h-5 w-5" /> 08062429849
+                <Phone className="mr-2 h-5 w-5" /> 7999983093
               </a>
             </Button>
           </div>
@@ -1788,7 +1788,7 @@ const ContactSection = () => {
 
   const contactInfo = [
     { icon: MapPin, label: "Our Office", value: "Boriyakhurd, Raipur, Chhattisgarh 492013" },
-    { icon: Phone, label: "Call Us", value: "08062429849" },
+    { icon: Phone, label: "Call Us", value: "7999983093" },
     { icon: Clock, label: "Timings", value: "10:30 AM - 07:00 PM (All Days Open)" },
     { icon: Mail, label: "Email", value: "shrirajteam@gmail.com" },
   ];
@@ -2013,7 +2013,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                <span>08062429849</span>
+                <span>7999983093</span>
               </li>
               <li className="flex items-center gap-3">
                 <Clock className="h-5 w-5 text-primary flex-shrink-0" />
