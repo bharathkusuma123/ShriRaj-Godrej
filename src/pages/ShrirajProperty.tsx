@@ -1405,6 +1405,829 @@
 
 
 
+// // pages/ShrirajProperty.tsx
+// import { Button } from "@/components/ui/button";
+// import { Input } from "@/components/ui/input";
+// import { Textarea } from "@/components/ui/textarea";
+// import { Card, CardContent } from "@/components/ui/card";
+// import { 
+//   Home, 
+//   Phone, 
+//   Mail, 
+//   MapPin, 
+//   Clock, 
+//   CheckCircle2, 
+//   ShoppingBag, 
+//   Key, 
+//   Star, 
+//   Menu, 
+//   X, 
+//   ArrowRight,
+//   Building,
+//   Users,
+//   Award,
+//   ShieldCheck,
+//   Gem,
+//   HeadphonesIcon,
+//   ExternalLink
+// } from "lucide-react";
+// import { Calendar } from "lucide-react";
+// import { useState } from "react";
+
+// // Import hero background image
+// import heroBg from "@/assets/hero-bg.jpg";
+// import navlogo from "@/images/newshrirajlogo.jpeg"
+// import img1 from "@/images/godrejraipurplots.jpg"
+// import img2 from "@/images/wallfortparkview.jpg"
+
+
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { 
+//   faFacebookF, 
+//   faXTwitter, 
+//   faYoutube, 
+//   faInstagram 
+// } from '@fortawesome/free-brands-svg-icons';
+// import './Footer.css';
+
+// // Import all 3 images
+// import Logo from "@/images/newshrirajlogo.jpeg"; // Your main logo
+// import GooglePlayBadge from "@/images/1.png"; // Google Play image
+// import AppStoreBadge from '@/images/2.png'; // App Store image
+
+
+// // ============ Navbar Component ============
+// const Navbar = () => {
+//   const [open, setOpen] = useState(false);
+
+//   const navLinks = [
+//     { label: "Home", href: "#home" },
+//     { label: "About", href: "#about" },
+//     { label: "Projects", href: "#projects" },
+//     { label: "Gallery", href: "#gallery" },
+//     { label: "Contact", href: "#contact" },
+//   ];
+
+//   return (
+//     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+//       <div className="container mx-auto flex items-center justify-between h-16 px-4 lg:px-8">
+//         <a href="#home" className="flex items-center gap-2">
+//           <img 
+//             src={navlogo} 
+//             alt="Shriraj Property Logo" 
+//             className="h-14 w-auto"
+//           />
+//         </a>
+
+//         <ul className="hidden md:flex items-center gap-8">
+//           {navLinks.map((link) => (
+//             <li key={link.href}>
+//               <a
+//                 href={link.href}
+//                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+//               >
+//                 {link.label}
+//               </a>
+//             </li>
+//           ))}
+//         </ul>
+
+//         <Button className="hidden md:inline-flex" size="sm" asChild>
+//           <a href="tel:8062429849">Call Now : 7999983093</a>
+//         </Button>
+
+//         <button
+//           className="md:hidden text-foreground"
+//           onClick={() => setOpen(!open)}
+//           aria-label="Toggle menu"
+//         >
+//           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+//         </button>
+//       </div>
+
+//       {open && (
+//         <div className="md:hidden bg-background border-b border-border px-4 pb-4">
+//           <ul className="flex flex-col gap-3">
+//             {navLinks.map((link) => (
+//               <li key={link.href}>
+//                 <a
+//                   href={link.href}
+//                   className="block py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+//                   onClick={() => setOpen(false)}
+//                 >
+//                   {link.label}
+//                 </a>
+//               </li>
+//             ))}
+//           </ul>
+//           <Button className="w-full mt-3" size="sm" asChild>
+//             <a href="tel:7999983093">Call Now : 7999983093</a>
+//           </Button>
+//         </div>
+//       )}
+//     </nav>
+//   );
+// };
+
+// // ============ Hero Section ============
+// const HeroSection = () => {
+//   return (
+//     <section
+//       id="home"
+//       className="relative min-h-screen flex items-center overflow-hidden"
+//     >
+//       <div
+//         className="absolute inset-0 bg-cover bg-center"
+//         style={{ backgroundImage: `url(${heroBg})` }}
+//       />
+//       <div className="absolute inset-0 bg-foreground/65" />
+
+//       <div className="relative z-10 container mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center pt-20">
+//         <div>
+//           <p className="text-white font-medium tracking-widest uppercase text-sm mb-4">
+//             Shriraj Property Solutions Pvt. Ltd.
+//           </p>
+//           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
+//             Your Trusted Partner in{" "}
+//             <span className="text-white">Property Solutions</span>
+//           </h1>
+//           <p className="text-white/80 text-lg max-w-xl mb-8">
+//             Farmhouses, flats, shops, rentals and more — all available under one roof. Based in Raipur, Chhattisgarh.
+//           </p>
+//           <div className="flex flex-col sm:flex-row gap-4">
+//             <Button size="lg" className="text-base px-8" asChild>
+//               <a href="#contact">
+//                 Contact Us <ArrowRight className="ml-2 h-5 w-5" />
+//               </a>
+//             </Button>
+//             <Button size="lg" variant="outline" className="text-base px-8 border-white/30 hover:bg-white/10 hover:text-white" asChild>
+//               <a href="tel:8062429849">
+//                 <Phone className="mr-2 h-5 w-5" /> 7999983093
+//               </a>
+//             </Button>
+//           </div>
+//         </div>
+//         <div className="hidden lg:block">
+//           <img
+//             src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&h=500"
+//             alt="Modern property exterior"
+//             className="rounded-2xl shadow-2xl w-full object-cover h-[460px]"
+//           />
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// // ============ About Section ============
+// const AboutSection = () => {
+//   const highlights = [
+//     "Farm houses, residential plots & commercial properties",
+//     "2 & 3 BHK flats, rentals and industrial land",
+//     "Trusted service and market insight since 2019",
+//     "Expert guidance for buyers, sellers & investors",
+//   ];
+
+//   return (
+//     <section id="about" className="py-20 bg-background">
+//       <div className="container mx-auto px-4">
+//         <div className="grid lg:grid-cols-2 gap-14 items-center">
+//           <div className="relative">
+//             <img
+//               src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&h=500"
+//               alt="Commercial building architecture"
+//               className="rounded-2xl shadow-xl w-full object-cover h-[420px]"
+//               loading="lazy"
+//             />
+//           </div>
+//           <div>
+//             <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground mb-5">
+//               Shriraj Property Solutions Pvt. Ltd.
+//             </h2>
+//             <p className="text-muted-foreground leading-relaxed mb-6">
+//               Founded in 2019, Shriraj Property Solutions Pvt. Ltd. is a Raipur-based real estate company dealing in farm houses, residential plots, commercial properties, 2 & 3 BHK flats, rentals and industrial land. We assist buyers, sellers and investors find the right property at the right value, backed by trusted service and market insight.
+//             </p>
+//             <ul className="space-y-3 mb-8">
+//               {highlights.map((h) => (
+//                 <li key={h} className="flex items-center gap-3 text-foreground">
+//                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
+//                   <span className="text-sm">{h}</span>
+//                 </li>
+//               ))}
+//             </ul>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// // ============ Projects Section ============
+// const ProjectsSection = () => {
+//   const projects = [
+//     {
+//       title: "Godrej Properties",
+//       propertyType: "Residential Plots",
+//       configuration: "1200 - 1800 sq.ft.",
+//       location: "Old Dhamtari Rd, Chhattisgarh",
+//       image: img1,
+//       link: "/godrej"
+//     },
+//     {
+//       title: "Wallfort Parkview",
+//       propertyType: "Residential Plots",
+//       configuration: "619 - 1500 sq.ft.",
+//       location: "Bhatagaon, Raipur",
+//       image:img2,
+//       link: "/wallfort"
+//     },
+//   ];
+
+//   return (
+//     <section id="projects" className="py-10 bg-secondary">
+//       <div className="container mx-auto px-4">
+//         <div className="text-center mb-14">
+//           <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground">
+//             Projects
+//           </h2>
+//           {/* <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
+//             Expert Solutions for Property Sale, Purchase and Rental — Residential, industrial, commercial, 2 BHK, 3 BHK, shops and rental properties.
+//           </p> */}
+//         </div>
+//         <div className="grid md:grid-cols-2 gap-8">
+//           {projects.map((project) => (
+//             <Card key={project.title} className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+//               <div className="relative overflow-hidden">
+//                 <img
+//                   src={project.image}
+//                   alt={project.title}
+//                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+//                   loading="lazy"
+//                 />
+//               </div>
+//               <CardContent className="p-6">
+//                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">{project.title}</h3>
+                
+//                 <div className="space-y-2 mb-4">
+//                   <div className="flex items-start gap-2">
+//                     <span className="text-primary font-medium text-sm min-w-[100px]">Property Type:</span>
+//                     <span className="text-muted-foreground text-sm">{project.propertyType}</span>
+//                   </div>
+//                   <div className="flex items-start gap-2">
+//                     <span className="text-primary font-medium text-sm min-w-[100px]">Configuration:</span>
+//                     <span className="text-muted-foreground text-sm">{project.configuration}</span>
+//                   </div>
+//                   <div className="flex items-start gap-2">
+//                     <span className="text-primary font-medium text-sm min-w-[100px]">Location:</span>
+//                     <span className="text-muted-foreground text-sm">{project.location}</span>
+//                   </div>
+//                 </div>
+
+//                 <Button 
+//                   variant="outline" 
+//                   size="sm" 
+//                   className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+//                   asChild
+//                 >
+//                   <a href={project.link}>
+//                     View Details <ExternalLink className="ml-2 h-4 w-4" />
+//                   </a>
+//                 </Button>
+//               </CardContent>
+//             </Card>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// // ============ Why Choose Us Section ============
+// const WhyChooseUs = () => {
+//   const reasons = [
+//     {
+//       icon: ShieldCheck,
+//       title: "Experience & Expertise",
+//       description: "With years of local market knowledge, we guide you through every step — from selecting the right plot to closing the best deal.",
+//     },
+//     {
+//       icon: Gem,
+//       title: "Wide Range of Properties",
+//       description: "From farmhouses and flats to commercial shops and rental units, we offer diverse listings tailored to all needs and budgets.",
+//     },
+//     {
+//       icon: HeadphonesIcon,
+//       title: "Client-Centric Approach",
+//       description: "We prioritize transparency, honesty and your satisfaction, helping buyers, investors and tenants with genuine property options.",
+//     },
+//   ];
+
+//   return (
+//     <section className="py-10 bg-secondary">
+//       <div className="container mx-auto px-4">
+//         <div className="text-center mb-14">
+//           <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground">
+//             Why Choose Us
+//           </h2>
+//           <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
+//             Your trusted partner for seamless real estate solutions in Raipur and across Chhattisgarh.
+//           </p>
+//         </div>
+//         <div className="grid md:grid-cols-3 gap-8">
+//           {reasons.map((r) => (
+//             <div
+//               key={r.title}
+//               className="bg-card rounded-xl p-8 text-center shadow-sm hover:shadow-md transition-shadow"
+//             >
+//               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5">
+//                 <r.icon className="h-8 w-8 text-primary" />
+//               </div>
+//               <h3 className="font-display text-lg font-semibold text-foreground mb-3">{r.title}</h3>
+//               <p className="text-muted-foreground text-sm leading-relaxed">{r.description}</p>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// // ============ Gallery Section ============
+// const GallerySection = () => {
+//   const galleryImages = [
+//     { src: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=400&fit=crop", alt: "Luxury villa exterior" },
+//     { src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&h=400&fit=crop", alt: "Modern residence" },
+//     { src: "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=400&h=400&fit=crop", alt: "Apartment complex" },
+//     { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=400&fit=crop", alt: "Property exterior" },
+//     { src: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=400&fit=crop", alt: "Commercial space" },
+//     { src: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&h=400&fit=crop", alt: "Residential building" },
+//   ];
+
+//   return (
+//     <section id="gallery" className="py-10 bg-background">
+//       <div className="container mx-auto px-4">
+//         <div className="text-center mb-14">
+//           <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground">
+//             Explore Our Gallery
+//           </h2>
+//         </div>
+//         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+//           {galleryImages.map((img, i) => (
+//             <div key={i} className="group relative overflow-hidden rounded-xl aspect-square">
+//               <img
+//                 src={img.src}
+//                 alt={img.alt}
+//                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+//                 loading="lazy"
+//               />
+//               <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/30 transition-colors duration-300" />
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// // ============ Contact Section ============
+// const ContactSection = () => {
+//   const [formData, setFormData] = useState({
+//     full_name: '',
+//     email: '',
+//     phone_number: '',
+//     message: ''
+//   });
+  
+//   const [isSubmitting, setIsSubmitting] = useState(false);
+//   const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
+
+//   const contactInfo = [
+//     { icon: MapPin, label: "Our Office", value: "Boriyakhurd, Raipur, Chhattisgarh 492013" },
+//     { icon: Phone, label: "Call Us", value: "7999983093" },
+//     { icon: Clock, label: "Timings", value: "10:30 AM - 07:00 PM (All Days Open)" },
+//     { icon: Mail, label: "Email", value: "shrirajteam@gmail.com" },
+//   ];
+
+//   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+//     const { name, value } = e.target;
+//     setFormData(prev => ({
+//       ...prev,
+//       [name]: value
+//     }));
+//   };
+
+//   const handleSubmit = async (e: React.FormEvent) => {
+//     e.preventDefault();
+//     setIsSubmitting(true);
+//     setSubmitStatus({ type: '', message: '' });
+
+//     const payload = {
+//       full_name: formData.full_name,
+//       email: formData.email,
+//       phone_number: formData.phone_number,
+//       message: formData.message
+//     };
+
+//     try {
+//       const response = await fetch('https://shrirajproperty.com:90/leads/', {
+//         method: 'POST',
+//         headers: {
+//           'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(payload)
+//       });
+
+//       const data = await response.json();
+
+//       if (response.ok) {
+//         setSubmitStatus({ 
+//           type: 'success', 
+//           message: 'Thank you! Your message has been sent successfully.' 
+//         });
+//         // Reset form
+//         setFormData({
+//           full_name: '',
+//           email: '',
+//           phone_number: '',
+//           message: ''
+//         });
+//       } else {
+//         setSubmitStatus({ 
+//           type: 'error', 
+//           message: data.message || 'Something went wrong. Please try again.' 
+//         });
+//       }
+//     } catch (error) {
+//       setSubmitStatus({ 
+//         type: 'error', 
+//         message: 'Network error. Please check your connection and try again.' 
+//       });
+//     } finally {
+//       setIsSubmitting(false);
+      
+//       // Clear success message after 5 seconds
+//       if (submitStatus.type === 'success') {
+//         setTimeout(() => {
+//           setSubmitStatus({ type: '', message: '' });
+//         }, 5000);
+//       }
+//     }
+//   };
+
+//   return (
+//     <section id="contact" className="py-10 bg-secondary">
+//       <div className="container mx-auto px-4">
+//         <div className="text-center mb-14">
+//           <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground">
+//             Get in Touch
+//           </h2>
+//           <p className="text-muted-foreground mt-3 max-w-xl mx-auto">
+//             Connect with Shriraj Property Solutions Pvt. Ltd. today for expert advice and reliable services for all your real estate needs.
+//           </p>
+//         </div>
+//         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+//           <div className="bg-card rounded-2xl p-8 shadow-lg border border-border">
+//             {submitStatus.message && (
+//               <div className={`mb-6 p-4 rounded-lg ${
+//                 submitStatus.type === 'success' 
+//                   ? 'bg-green-100 text-green-700 border border-green-200' 
+//                   : 'bg-red-100 text-red-700 border border-red-200'
+//               }`}>
+//                 {submitStatus.message}
+//               </div>
+//             )}
+            
+//             <form className="space-y-5" onSubmit={handleSubmit}>
+//               <Input 
+//                 placeholder="Full Name *" 
+//                 name="full_name"
+//                 value={formData.full_name}
+//                 onChange={handleChange}
+//                 required
+//                 disabled={isSubmitting}
+//               />
+//               <Input 
+//                 placeholder="Email Address *" 
+//                 type="email" 
+//                 name="email"
+//                 value={formData.email}
+//                 onChange={handleChange}
+//                 required
+//                 disabled={isSubmitting}
+//               />
+//               <Input 
+//                 placeholder="Phone Number *" 
+//                 type="tel" 
+//                 name="phone_number"
+//                 value={formData.phone_number}
+//                 onChange={handleChange}
+//                 required
+//                 disabled={isSubmitting}
+//               />
+//               <Textarea 
+//                 placeholder="Your Message" 
+//                 rows={5} 
+//                 name="message"
+//                 value={formData.message}
+//                 onChange={handleChange}
+//                 required
+//                 disabled={isSubmitting}
+//               />
+//               <Button 
+//                 className="w-full" 
+//                 size="lg" 
+//                 type="submit"
+//                 disabled={isSubmitting}
+//               >
+//                 {isSubmitting ? 'Sending...' : 'Send Message'}
+//               </Button>
+//             </form>
+//           </div>
+
+//           <div className="flex flex-col justify-center gap-8">
+//             {contactInfo.map((c) => (
+//               <div key={c.label} className="flex items-start gap-4">
+//                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+//                   <c.icon className="h-5 w-5 text-primary" />
+//                 </div>
+//                 <div>
+//                   <h4 className="font-semibold text-foreground mb-1">{c.label}</h4>
+//                   <p className="text-muted-foreground text-sm">{c.value}</p>
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+
+
+//          <div className="m-4">
+//           <iframe 
+//                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.7725397066715!2d81.64549020000001!3d21.201193002668766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd47b3771569%3A0x4d0cfe26e4292e7e!2sSHRIRAJ%20PROPERTY%20SOLUTIONS%20PVT.%20LTD.!5e0!3m2!1sen!2sin!4v1773393949617!5m2!1sen!2sin" 
+//                 className="w-full h-full min-h-[400px]"
+//                 style={{ border: 0, }}
+//                 allowFullScreen
+//                 loading="lazy"
+//                 referrerPolicy="no-referrer-when-downgrade"
+//                 title="Shriraj Property Office Location"
+//               />
+
+//          </div>
+
+        
+//       </div>
+//     </section>
+//   );
+// };
+
+// // ============ Footer ============
+// // const Footer = () => {
+// //   return (
+// //     <footer className="bg-gray-900 text-white py-14">
+// //       <div className="container mx-auto px-4">
+// //         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+// //           {/* Logo & Description */}
+// //           <div className="md:col-span-1">
+// //             <div className="flex items-center gap-2 mb-4">
+// //               <img 
+// //                 src={navlogo} 
+// //                 alt="Shriraj Property Logo" 
+// //                 className="h-14 w-auto" 
+// //               />
+// //             </div>
+// //             <p className="text-gray-300 text-sm leading-relaxed">
+// //               Shriraj Property Solutions Pvt. Ltd. — Your trusted partner for seamless real estate solutions in Raipur and across Chhattisgarh.
+// //             </p>
+// //           </div>
+
+// //           {/* Quick Links */}
+// //           <div className="md:col-span-1">
+// //             <h4 className="font-semibold mb-4 text-lg relative inline-block pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-0.5 after:bg-primary">
+// //               Quick Links
+// //             </h4>
+// //             <ul className="space-y-3 text-sm text-gray-300">
+// //               <li>
+// //                 <a href="#home" className="hover:text-primary transition-colors flex items-center gap-2">
+// //                   <span className="w-1 h-1 bg-primary rounded-full"></span>
+// //                   Home
+// //                 </a>
+// //               </li>
+// //               <li>
+// //                 <a href="#about" className="hover:text-primary transition-colors flex items-center gap-2">
+// //                   <span className="w-1 h-1 bg-primary rounded-full"></span>
+// //                   About
+// //                 </a>
+// //               </li>
+// //               <li>
+// //                 <a href="#projects" className="hover:text-primary transition-colors flex items-center gap-2">
+// //                   <span className="w-1 h-1 bg-primary rounded-full"></span>
+// //                   Projects
+// //                 </a>
+// //               </li>
+// //               <li>
+// //                 <a href="#contact" className="hover:text-primary transition-colors flex items-center gap-2">
+// //                   <span className="w-1 h-1 bg-primary rounded-full"></span>
+// //                   Contact
+// //                 </a>
+// //               </li>
+// //             </ul>
+// //           </div>
+
+// //           {/* Contact Info */}
+// //           <div className="md:col-span-1">
+// //             <h4 className="font-semibold mb-4 text-lg relative inline-block pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-0.5 after:bg-primary">
+// //               Contact Info
+// //             </h4>
+// //             <ul className="space-y-3 text-sm text-gray-300">
+// //               <li className="flex items-start gap-3">
+// //                 <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+// //                 <span>Boriyakhurd, Raipur, CG 492013</span>
+// //               </li>
+// //               <li className="flex items-center gap-3">
+// //                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />
+// //                 <span>7999983093</span>
+// //               </li>
+// //               <li className="flex items-center gap-3">
+// //                 <Clock className="h-5 w-5 text-primary flex-shrink-0" />
+// //                 <span>10:30 AM - 07:00 PM | All Days Open</span>
+// //               </li>
+// //             </ul>
+// //           </div>
+// //         </div>
+// //       </div>
+// //     </footer>
+// //   );
+// // };
+
+
+
+
+// // ============ Footer ============
+// const Footer = () => {
+//   const currentYear = new Date().getFullYear();
+
+//   return (
+//     <footer className="bg-gray-900 text-white py-14">
+//       <div className="container mx-auto px-4">
+//         {/* Main Footer Content - 4 Columns */}
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+//           {/* Column 1: Logo and Description */}
+//           <div>
+//             <img
+//               src={Logo}
+//               alt="Shriraj Logo"
+//               className="h-20 w-auto mb-4"
+//             />
+//             <p className="text-gray-300 text-sm leading-relaxed">
+//               Shriraj Property Solutions Pvt. Ltd. — Your trusted partner for seamless real estate solutions in Raipur and across Chhattisgarh.
+//             </p>
+//           </div>
+
+//           {/* Column 2: Quick Links */}
+//           <div>
+//             <h4 className="font-semibold mb-4 text-lg relative inline-block pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-0.5 after:bg-primary">
+//               Quick Links
+//             </h4>
+//             <ul className="space-y-2">
+//               <li><a href="#home" className="text-gray-300 hover:text-primary transition-colors">Home</a></li>
+//               <li><a href="#about" className="text-gray-300 hover:text-primary transition-colors">About</a></li>
+//               <li><a href="#projects" className="text-gray-300 hover:text-primary transition-colors">Projects</a></li>
+//               <li><a href="#gallery" className="text-gray-300 hover:text-primary transition-colors">Gallery</a></li>
+//               <li><a href="/contact" className="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
+//             </ul>
+//           </div>
+
+//           {/* Column 3: Contact Info */}
+//           <div>
+//             <h4 className="font-semibold mb-4 text-lg relative inline-block pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-0.5 after:bg-primary">
+//               Contact Info
+//             </h4>
+//             <ul className="space-y-3">
+//               <li className="flex items-start gap-3">
+//                 <MapPin className="w-4 h-4 text-gold"/>
+//                 <span className="text-gray-300 text-sm">Boriyakhurd, Raipur, Chhattisgarh 492013</span>
+//               </li>
+//               <li className="flex items-center gap-3">
+//                 <Phone className="w-4 h-4 text-gold" />
+//                 <span className="text-gray-300 text-sm">7999983093</span>
+//               </li>
+//               <li className="flex items-center gap-3">
+//                 <Clock className="w-4 h-4 text-gold" />
+//                 <span className="text-gray-300 text-sm">10:30 AM - 07:00 PM | All Days Open</span>
+//               </li>
+//             </ul>
+//           </div>
+
+//           {/* Column 4: Download App & Social */}
+//           <div>
+//             <h4 className="font-semibold mb-4 text-lg relative inline-block pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-0.5 after:bg-primary">
+//               Download Our App
+//             </h4>
+            
+//             {/* App Badges - Inline on all screens */}
+//             <div className="flex flex-row flex-wrap gap-3 mb-6">
+//               <a 
+//                 href="https://play.google.com/store/apps/details?id=com.yasla.shrirajteam" 
+//                 target="_blank" 
+//                 rel="noopener noreferrer"
+//                 className="inline-block"
+//               >
+//                 <img 
+//                   src={GooglePlayBadge} 
+//                   alt="Get it on Google Play" 
+//                   className="h-12 w-auto"
+//                 />
+//               </a>
+//               <a 
+//                 href="https://apps.apple.com/in/app/shriraj/id6754551709" 
+//                 target="_blank" 
+//                 rel="noopener noreferrer"
+//                 className="inline-block"
+//               >
+//                 <img 
+//                   src={AppStoreBadge} 
+//                   alt="Download on the App Store" 
+//                   className="h-12 w-auto"
+//                 />
+//               </a>
+//             </div>
+
+//             {/* Social Media Icons */}
+//             <div className="flex flex-row gap-3">
+//               <a 
+//                 href="https://www.facebook.com/shrirajteam/" 
+//                 aria-label="Facebook"
+//                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+//               >
+//                 <FontAwesomeIcon icon={faFacebookF} className="text-white" />
+//               </a>
+//               <a 
+//                 href="https://x.com/shrirajteam" 
+//                 aria-label="Twitter"
+//                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+//               >
+//                 <FontAwesomeIcon icon={faXTwitter} className="text-white" />
+//               </a>
+//               <a 
+//                 href="https://www.youtube.com/@Shrirajteam" 
+//                 aria-label="YouTube"
+//                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+//               >
+//                 <FontAwesomeIcon icon={faYoutube} className="text-white" />
+//               </a>
+//               <a 
+//                 href="https://www.instagram.com/shrirajteam?igsh=YzhjcjVuMGIxZzJq" 
+//                 aria-label="Instagram"
+//                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+//               >
+//                 <FontAwesomeIcon icon={faInstagram} className="text-white" />
+//               </a>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* Divider */}
+//         <hr className="border-gray-800 my-8" />
+
+//         {/* Copyright and Policies */}
+//         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+//           <p className="text-gray-400 text-sm">
+//             &copy; {currentYear} Shriraj Property Solutions Pvt. Ltd.
+//           </p>
+//           {/* <div className="flex gap-4 text-sm">
+//             <a href="/privacy-policy" className="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
+//             <span className="text-gray-600">|</span>
+//             <a href="/terms-and-conditions" className="text-gray-400 hover:text-primary transition-colors">Terms & Conditions</a>
+//             <span className="text-gray-600">|</span>
+//             <a href="/refund-policy" className="text-gray-400 hover:text-primary transition-colors">Refund Policy</a>
+//           </div> */}
+//         </div>
+//       </div>
+//     </footer>
+//   );
+// };
+
+// // ============ Main Component ============
+// const ShrirajProperty = () => {
+//   return (
+//     <div className="min-h-screen bg-background">
+//       <Navbar />
+//       <HeroSection />
+//       <AboutSection />
+//       <ProjectsSection />
+//       <WhyChooseUs />
+//       <GallerySection />
+//       <ContactSection />
+//       <Footer />
+//     </div>
+//   );
+// };
+
+// export default ShrirajProperty;
+
+
+//===============================================
+
+
 // pages/ShrirajProperty.tsx
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -1471,7 +2294,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4 lg:px-8">
-        <a href="#home" className="flex items-center gap-2">
+        <a href="/" className="flex items-center gap-2">
           <img 
             src={navlogo} 
             alt="Shriraj Property Logo" 
@@ -1650,9 +2473,6 @@ const ProjectsSection = () => {
           <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground">
             Projects
           </h2>
-          {/* <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
-            Expert Solutions for Property Sale, Purchase and Rental — Residential, industrial, commercial, 2 BHK, 3 BHK, shops and rental properties.
-          </p> */}
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project) => (
@@ -1980,88 +2800,6 @@ const ContactSection = () => {
 };
 
 // ============ Footer ============
-// const Footer = () => {
-//   return (
-//     <footer className="bg-gray-900 text-white py-14">
-//       <div className="container mx-auto px-4">
-//         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-//           {/* Logo & Description */}
-//           <div className="md:col-span-1">
-//             <div className="flex items-center gap-2 mb-4">
-//               <img 
-//                 src={navlogo} 
-//                 alt="Shriraj Property Logo" 
-//                 className="h-14 w-auto" 
-//               />
-//             </div>
-//             <p className="text-gray-300 text-sm leading-relaxed">
-//               Shriraj Property Solutions Pvt. Ltd. — Your trusted partner for seamless real estate solutions in Raipur and across Chhattisgarh.
-//             </p>
-//           </div>
-
-//           {/* Quick Links */}
-//           <div className="md:col-span-1">
-//             <h4 className="font-semibold mb-4 text-lg relative inline-block pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-0.5 after:bg-primary">
-//               Quick Links
-//             </h4>
-//             <ul className="space-y-3 text-sm text-gray-300">
-//               <li>
-//                 <a href="#home" className="hover:text-primary transition-colors flex items-center gap-2">
-//                   <span className="w-1 h-1 bg-primary rounded-full"></span>
-//                   Home
-//                 </a>
-//               </li>
-//               <li>
-//                 <a href="#about" className="hover:text-primary transition-colors flex items-center gap-2">
-//                   <span className="w-1 h-1 bg-primary rounded-full"></span>
-//                   About
-//                 </a>
-//               </li>
-//               <li>
-//                 <a href="#projects" className="hover:text-primary transition-colors flex items-center gap-2">
-//                   <span className="w-1 h-1 bg-primary rounded-full"></span>
-//                   Projects
-//                 </a>
-//               </li>
-//               <li>
-//                 <a href="#contact" className="hover:text-primary transition-colors flex items-center gap-2">
-//                   <span className="w-1 h-1 bg-primary rounded-full"></span>
-//                   Contact
-//                 </a>
-//               </li>
-//             </ul>
-//           </div>
-
-//           {/* Contact Info */}
-//           <div className="md:col-span-1">
-//             <h4 className="font-semibold mb-4 text-lg relative inline-block pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-0.5 after:bg-primary">
-//               Contact Info
-//             </h4>
-//             <ul className="space-y-3 text-sm text-gray-300">
-//               <li className="flex items-start gap-3">
-//                 <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-//                 <span>Boriyakhurd, Raipur, CG 492013</span>
-//               </li>
-//               <li className="flex items-center gap-3">
-//                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-//                 <span>7999983093</span>
-//               </li>
-//               <li className="flex items-center gap-3">
-//                 <Clock className="h-5 w-5 text-primary flex-shrink-0" />
-//                 <span>10:30 AM - 07:00 PM | All Days Open</span>
-//               </li>
-//             </ul>
-//           </div>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// };
-
-
-
-
-// ============ Footer ============
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -2088,11 +2826,14 @@ const Footer = () => {
               Quick Links
             </h4>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-300 hover:text-primary transition-colors">Home</a></li>
-              <li><a href="#about" className="text-gray-300 hover:text-primary transition-colors">About</a></li>
-              <li><a href="#projects" className="text-gray-300 hover:text-primary transition-colors">Projects</a></li>
-              <li><a href="#gallery" className="text-gray-300 hover:text-primary transition-colors">Gallery</a></li>
-              <li><a href="/contact" className="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
+              <li><a href="/" className="text-gray-300 hover:text-white transition-colors">Home</a></li>
+              <li><a href="#about" className="text-gray-300 hover:text-white transition-colors">About</a></li>
+              <li><a href="#projects" className="text-gray-300 hover:text-white transition-colors">Projects</a></li>
+              <li><a href="#gallery" className="text-gray-300 hover:text-white transition-colors">Gallery</a></li>
+              <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+              {/* <li><a href="/Shriraj-privacy-policy" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/Shriraj-terms&conditions" className="text-gray-300 hover:text-white transition-colors">Terms & Conditions</a></li> */}
+
             </ul>
           </div>
 
@@ -2103,15 +2844,15 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-gold"/>
+                <MapPin className="w-4 h-4 text-primary"/>
                 <span className="text-gray-300 text-sm">Boriyakhurd, Raipur, Chhattisgarh 492013</span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-gold" />
+                <Phone className="w-4 h-4 text-primary" />
                 <span className="text-gray-300 text-sm">7999983093</span>
               </li>
               <li className="flex items-center gap-3">
-                <Clock className="w-4 h-4 text-gold" />
+                <Clock className="w-4 h-4 text-primary" />
                 <span className="text-gray-300 text-sm">10:30 AM - 07:00 PM | All Days Open</span>
               </li>
             </ul>
@@ -2193,13 +2934,11 @@ const Footer = () => {
           <p className="text-gray-400 text-sm">
             &copy; {currentYear} Shriraj Property Solutions Pvt. Ltd.
           </p>
-          {/* <div className="flex gap-4 text-sm">
-            <a href="/privacy-policy" className="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
+          <div className="flex gap-4 text-sm">
+            <a href="/Shriraj-privacy-policy" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
             <span className="text-gray-600">|</span>
-            <a href="/terms-and-conditions" className="text-gray-400 hover:text-primary transition-colors">Terms & Conditions</a>
-            <span className="text-gray-600">|</span>
-            <a href="/refund-policy" className="text-gray-400 hover:text-primary transition-colors">Refund Policy</a>
-          </div> */}
+            <a href="/Shriraj-terms&conditions" className="text-gray-300 hover:text-white transition-colors">Terms & Conditions</a>
+          </div>
         </div>
       </div>
     </footer>

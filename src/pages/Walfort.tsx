@@ -4713,10 +4713,12 @@ const Wallfort = () => {
               Quick Links
             </h4>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-300 hover:text-primary transition-colors">Home</a></li>
-              <li><a href="#overview" className="text-gray-300 hover:text-primary transition-colors">Overview</a></li>
-              <li><a href="#amenities" className="text-gray-300 hover:text-primary transition-colors">Amenities</a></li>
-              <li><a href="#gallery" className="text-gray-300 hover:text-primary transition-colors">Gallery</a></li>
+              <li><a href="#home" className="text-gray-300 hover:text-white transition-colors">Home</a></li>
+              <li><a href="#overview" className="text-gray-300 hover:text-white transition-colors">Overview</a></li>
+              <li><a href="#amenities" className="text-gray-300 hover:text-white transition-colors">Amenities</a></li>
+              <li><a href="#gallery" className="text-gray-300 hover:text-white transition-colors">Gallery</a></li>
+               {/* <li><a href="/Shriraj-privacy-policy" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/Shriraj-terms&conditions" className="text-gray-300 hover:text-white transition-colors">Terms & Conditions</a></li> */}
               
             </ul>
           </div>
@@ -4818,13 +4820,13 @@ const Wallfort = () => {
           <p className="text-gray-400 text-sm">
             &copy; {currentYear} Shriraj Property Solutions Pvt. Ltd.
           </p>
-          {/* <div className="flex gap-4 text-sm">
-            <a href="/privacy-policy" className="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
+          <div className="flex gap-4 text-sm">
+            <a href="/Shriraj-privacy-policy" className="text-gray-300 hover:text-white  transition-colors">Privacy Policy</a>
             <span className="text-gray-600">|</span>
-            <a href="/terms-and-conditions" className="text-gray-400 hover:text-primary transition-colors">Terms & Conditions</a>
-            <span className="text-gray-600">|</span>
-            <a href="/refund-policy" className="text-gray-400 hover:text-primary transition-colors">Refund Policy</a>
-          </div> */}
+            <a href="/Shriraj-terms&conditions" className="text-gray-300 hover:text-white transition-colors">Terms & Conditions</a>
+            {/* <span className="text-gray-600">|</span>
+            <a href="/refund-policy" className="text-gray-400 hover:text-primary transition-colors">Refund Policy</a> */}
+          </div>
         </div>
       </div>
     </footer>

@@ -8,6 +8,8 @@ import NotFound from "./pages/NotFound";
 import Wallfort from "./pages/Walfort";
 import PropNest from "./pages/PropNest";
 import ShrirajProperty from "./pages/ShrirajProperty"; // Import the new component
+import ShrirajPropertyPrivacyPolicy from "./pages/ShrirajProperty_PrivacyPolicy";
+import ShrirajPropertyTermsAndConditions from "./pages/ShrirajProperty_TermsAndConditions"
 const queryClient = new QueryClient();
 
 
@@ -25,6 +27,9 @@ const App = () => (
     <Route path="/" element={<ShrirajProperty />} /> {/* Add new route */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
+           <Route path="/Shriraj-privacy-policy" element={<ShrirajPropertyPrivacyPolicy />} />
+           <Route path="/Shriraj-terms&conditions" element={<ShrirajPropertyTermsAndConditions />} />
+
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
